@@ -23,22 +23,23 @@ const product = [{
   },
   price:1381
 }];
+let html ='';
 product.forEach((product)=>{
-  const html=`
+   html+=`
    <div class="div_1">
           <div>
-            <img src="products/adults-plain-cotton-tshirt-2-pack-teal.jpg" class="product_img1">
+            <img src="${product.image}" class="product_img1">
           </div>
           
           <div class="product_sentence1">
-            <h4 class="content">Adults Plain Cotton T-Shirt - 2 Pack</h4>
+            <h4 class="content">"${product.name}</h4>
           </div>
           <div class="product_rting">
-            <img src="ratings/rating-45.png" class="product_strs">
-            <h3 class="rting_no">97</h3>
+            <img src="ratings/rating-${product.rating.stars * 10}.png" class="product_strs">
+            <h3 class="rting_no">${product.rating.count}</h3>
           </div>
           <div class="product_cost">
-            <h4>$18.57</h4>
+            <h4>$${(product.price / 100).toFixed(2)}</h4>
           </div>
           <div class="product_quntity">
             <select class="option">
@@ -60,4 +61,5 @@ product.forEach((product)=>{
       </div>
   `
   
-})
+});
+document.querySelector('.row-1').innerHTML=html;
