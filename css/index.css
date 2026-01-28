@@ -274,6 +274,7 @@ body{
   .header_div{
     flex-direction: row;
     height: auto;
+    z-index: 300;
   }
   
 }
