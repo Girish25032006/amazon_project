@@ -1,3 +1,4 @@
+import { cart } from "./cart.js";
 const product = [{
   image:'products/backpack.jpg',
   name:'Black Backpack with a compact design,perfect for daily use.',
