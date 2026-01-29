@@ -223,11 +223,37 @@ product.forEach((product)=>{
               <option value="2">10</option>
             </select>
           </div>
-          <div class="add_to_crt">
-            <button class="crt_btn">Add to Cart</button>
+          <div class="add_to_crt  " >
+            <button class="crt_btn  js-crt_btn" data-product-name ="${product.name}">Add to Cart</button>
           </div>
       </div>
   `
   
 });
 document.querySelector('.row-1').innerHTML=html;
+
+document.querySelectorAll('.js-crt_btn')
+.forEach((button)=>{
+  button.addEventListener('click',()=>{
+   const productName = button.dataset.productName;
+   let matching_product;
+   cart.forEach((item)=>{
+    if(productName === item.productName){
+      matching_product = item;
+   }
+   });
+    if(matching_product){
+     matching_product.quantity +=1;
+    }
+    else{
+      cart.push({
+        productName:productName,
+        quantity:1
+      })
+    }
+   
+   console.log(cart)
+  })
+ 
+})
+ 
