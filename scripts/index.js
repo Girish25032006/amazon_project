@@ -251,8 +251,12 @@ document.querySelectorAll('.js-crt_btn')
         quantity:1
       })
     }
+    let cartquantity=0;
+    cart.forEach((item)=>{
+      cartquantity+=item.quantity;
+    })
+    document.querySelector('.cart_number').innerHTML=cartquantity
    
-   console.log(cart)
   })
  
 })
