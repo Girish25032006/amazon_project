@@ -1,9 +1,15 @@
- export const cart = [];
+ export const cart = [{
+  productId:"e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+  quantity:2
+ },{
+  productId:"15b6fc6f-327a-4ec4-896f-486349e85a3d",
+  quantity:1
+ }];
 
- export function push_in_array(productName){
+ export function push_in_array(productId){
   let matching_product;
    cart.forEach((cartItem)=>{
-    if(productName === cartItem.productName){
+    if(productId === cartItem.productId){
       matching_product = cartItem;
    }
    });
@@ -12,7 +18,7 @@
     }
     else{
       cart.push({
-        productName:productName,
+        productId:productId,
         quantity:1
       })
     }

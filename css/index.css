@@ -252,7 +252,7 @@ body{
   
 }
 
-.row-1{
+.row1{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   column-gap: 3px;
@@ -266,7 +266,7 @@ body{
   
 }
 @media (max-width:600px) {
-  .row-1{
+  .row1{
     grid-template-columns: 1fr 1fr;
   }
   .row-2{
@@ -274,7 +274,7 @@ body{
   }
 }
 @media (max-width:768px) {
-  .row-1{
+  .row1{
     grid-template-columns: 1fr 1fr 1fr;
   }
   .row-2{
@@ -282,7 +282,7 @@ body{
   }
 }
 @media (min-width:1200px) {
-  .row-1{
+  .row1{
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }
   .row-2{

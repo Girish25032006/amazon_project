@@ -1,224 +1,8 @@
 import { cart,push_in_array } from "./cart.js";
-const product = [{
-  id:'1kt23ai001',
-  image:'images/products/backpack.jpg',
-  name:'Black Backpack with a compact design,perfect for daily use.',
-  rating:{
-    stars:3.5,
-    count:88
-  },
-  price:2021
-},{
-  id:'1kt23ai002',
-  image:'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
-  name:'Adults Plain Cotton T-Shirt - 2 Pack',
-  rating:{
-    stars:4.5,
-    count:97
-  },
-  price:1857
-},{
-  id:'1kt23ai003',
-  image:'images/products/athletic-cotton-socks-6-pairs.jpg',
-  name:'Black and Gray Athletic Cotton Socks - 6 Pairs',
-  rating:{
-    stars:3.5,
-    count:73
-  },
-  price:1381
-},{
-  id:'1kt23ai004',
-  image:'images/products/6-piece-non-stick-baking-set.webp',
-  name:'Six-piece nonstick baking pan set',
-  rating:{
-    stars:4.5,
-    count:93
-  },
-  price:1681
-},{
-  id:'1kt23ai005',
-  image:'images/products/blackout-curtains-black.jpg',
-  name:'Beige blackout curtain set',
-  rating:{
-    stars:4.5,
-    count:86
-  },
-  price:1881
-},{
-  id:'1kt23ai006',
-  image:'images/products/6-piece-white-dinner-plate-set.jpg',
-  name:'Six-piece white dinner plate set',
-  rating:{
-    stars:5,
-    count:99
-  },
-  price:1181
-},{
-  id:'1kt23ai007',
-  image:'images/products/coffeemaker-with-glass-carafe-black.jpg',
-  name:'Black coffee maker with glass carafe',
-  rating:{
-    stars:4,
-    count:88
-  },
-  price:2181
-},{
-   id:'1kt23ai008',
-  image:'images/products/countertop-blender-64-oz.jpg',
-  name:'Countertop blender with large jar',
-  rating:{
-    stars:4.5,
-    count:79
-  },
-  price:2981
-},{
-  id:'1kt23ai009',
-  image:'images/products/double-elongated-twist-french-wire-earrings.webp',
-  name:'Gold elongated twist drop earrings',
-  rating:{
-    stars:4.5,
-    count:83
-  },
-  price:3191
-},{
-  id:'1kt23ai010',
-  image:'images/products/duvet-cover-set-blue-twin.jpg',
-  name:'Blue twin duvet cover set',
-  rating:{
-    stars:1.0,
-    count:23
-  },
-  price:4111
-},{
-  id:'1kt23ai011',
-  image:'images/products/facial-tissue-2-ply-18-boxes.jpg',
-  name:'Two-ply facial tissue box pack',
-  rating:{
-    stars:4,
-    count:63
-  },
-  price:1981
-},{
-  id:'1kt23ai012',
-  image:'images/products/women-stretch-popover-hoodie-black.jpg',
-  name:'Womens black stretch pullover hoodie',
-  rating:{
-    stars:3.5,
-    count:53
-  },
-  price:2781
-},{
-  id:'1kt23ai013',
-  image:'images/products/women-chunky-beanie-gray.webp',
-  name:'Women gray chunky knit beanie',
-  rating:{
-    stars:5,
-    count:93
-  },
-  price:1481
-},{
-  id:'1kt23ai014',
-  image:'images/products/vanity-mirror-silver.jpg',
-  name:'Silver tabletop vanity mirror',
-  rating:{
-    stars:3,
-    count:43
-  },
-  price:2081
-},{
-  id:'1kt23ai015',
-  image:'images/products/umbrella.jpg',
-  name:'Compact folding umbrella',
-  rating:{
-    stars:4,
-    count:80
-  },
-  price:1881
-},{
-  id:'1kt23ai016',
-  image:'images/products/trash-can-with-foot-pedal-50-liter.jpg',
-  name:'50-liter foot pedal trash can',
-  rating:{
-    stars:5,
-    count:97
-  },
-  price:1181
-},{
-  id:'1kt23ai017',
-  image:'images/products/floral-mixing-bowl-set.jpg',
-  name:'Flore mixing bowl set with lids',
-  rating:{
-    stars:5,
-    count:79
-  },
-  price:1781
-},{
-  id:'1kt23ai018',
-  image:'images/products/sky-flower-stud-earrings.webp',
-  name:'Sky blue flower stud earrings',
-  rating:{
-    stars:4,
-    count:81
-  },
-  price:2381
-},{
-  id:'1kt23ai019',
-  image:'images/products/plain-hooded-fleece-sweatshirt-yellow.jpg',
-  name:'Yellow hooded fleece sweatshirt',
-  rating:{
-    stars:5,
-    count:95
-  },
-  price:2881
-},{
-  id:'1kt23ai020',
-  image:'images/products/non-stick-cooking-set-15-pieces.webp',
-  name:'15-piece nonstick cookware set',
-  rating:{
-    stars:3.5,
-    count:63
-  },
-  price:1281
-},{
-  id:'1kt23ai021',
-  image:'images/products/men-navigator-sunglasses-brown.jpg',
-  name:'Mens brown navigator sunglasses',
-  rating:{
-    stars:4.5,
-    count:86
-  },
-  price:1081
-},{
-  id:'1kt23ai022',
-  image:'images/products/round-airtight-food-storage-containers.jpg',
-  name:'Round airtight food storage containers',
-  rating:{
-    stars:3,
-    count:6.1
-  },
-  price:2681
-},{
-  id:'1kt23ai023',
-  image:'images/products/luxury-tower-set-6-piece.jpg',
-  name:'Luxury six-piece towel set',
-  rating:{
-    stars:4,
-    count:83
-  },
-  price:1681
-},{
-  id:'1kt23ai024',
-  image:'images/products/intermediate-composite-basketball.jpg',
-  name:'Intermediate composite basketball',
-  rating:{
-    stars:3.5,
-    count:75
-  },
-  price:1981
-}];
-let html ='';
-product.forEach((product)=>{
-   html+=`
+import { products } from "../data/products.js";
+let producthtml ='';
+products.forEach((product)=>{
+   producthtml+=`
    <div class="div_1">
           <div>
             <img src="${product.image}" class="product_img1">
@@ -232,7 +16,7 @@ product.forEach((product)=>{
             <h3 class="rting_no">${product.rating.count}</h3>
           </div>
           <div class="product_cost">
-            <h4>$${(product.price / 100).toFixed(2)}</h4>
+            <h4>$${(product.priceCents / 100).toFixed(2)}</h4>
           </div>
           <div class="product_quntity">
             <select class="option">
@@ -249,30 +33,31 @@ product.forEach((product)=>{
             </select>
           </div>
           <div class="add_to_crt  " >
-            <button class="crt_btn  js-crt_btn" data-product-name ="${product.name}">Add to Cart</button>
+            <button class="crt_btn  js-crt_btn" data-product-id ="${product.id}">Add to Cart</button>
           </div>
       </div>
   `
   
 });
-document.querySelector('.row-1').innerHTML=html;
-console.log(html);
 
+document.querySelector('.row1').innerHTML=producthtml;
 
 
 function cartquantity_total(){
-   let cartquantity=0;
-    cart.forEach((cartItem)=>{
-      cartquantity+=cartItem.quantity;
-    })
-    document.querySelector('.cart_number').innerHTML=cartquantity;
+  let cartquantity=0;
+  cart.forEach((cartItem)=>{
+    cartquantity+=cartItem.quantity;
+  })
+  
+  
+  document.querySelector('.cart_number').innerHTML=cartquantity;
 }
 
 document.querySelectorAll('.js-crt_btn')
 .forEach((button)=>{
   button.addEventListener('click',()=>{
-   const productName = button.dataset.productName;
-   push_in_array(productName)
+   const productId = button.dataset.productId;
+   push_in_array(productId)
    cartquantity_total()
    
   })
