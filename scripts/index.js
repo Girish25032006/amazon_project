@@ -1,4 +1,4 @@
-import { cart } from "./cart.js";
+import { cart,push_in_array } from "./cart.js";
 const product = [{
   image:'products/backpack.jpg',
   name:'Black Backpack with a compact design,perfect for daily use.',
@@ -233,30 +233,22 @@ product.forEach((product)=>{
 });
 document.querySelector('.row-1').innerHTML=html;
 
+
+
+function cartquantity_total(){
+   let cartquantity=0;
+    cart.forEach((cartItem)=>{
+      cartquantity+=cartItem.quantity;
+    })
+    document.querySelector('.cart_number').innerHTML=cartquantity;
+}
+
 document.querySelectorAll('.js-crt_btn')
 .forEach((button)=>{
   button.addEventListener('click',()=>{
    const productName = button.dataset.productName;
-   let matching_product;
-   cart.forEach((item)=>{
-    if(productName === item.productName){
-      matching_product = item;
-   }
-   });
-    if(matching_product){
-     matching_product.quantity +=1;
-    }
-    else{
-      cart.push({
-        productName:productName,
-        quantity:1
-      })
-    }
-    let cartquantity=0;
-    cart.forEach((item)=>{
-      cartquantity+=item.quantity;
-    })
-    document.querySelector('.cart_number').innerHTML=cartquantity
+   push_in_array(productName)
+   cartquantity_total()
    
   })
  
