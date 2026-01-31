@@ -1,6 +1,7 @@
 import { cart,push_in_array } from "./cart.js";
 const product = [{
-  image:'products/backpack.jpg',
+  id:'1kt23ai001',
+  image:'images/products/backpack.jpg',
   name:'Black Backpack with a compact design,perfect for daily use.',
   rating:{
     stars:3.5,
@@ -8,7 +9,8 @@ const product = [{
   },
   price:2021
 },{
-  image:'products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
+  id:'1kt23ai002',
+  image:'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
   name:'Adults Plain Cotton T-Shirt - 2 Pack',
   rating:{
     stars:4.5,
@@ -16,7 +18,8 @@ const product = [{
   },
   price:1857
 },{
-  image:'products/athletic-cotton-socks-6-pairs.jpg',
+  id:'1kt23ai003',
+  image:'images/products/athletic-cotton-socks-6-pairs.jpg',
   name:'Black and Gray Athletic Cotton Socks - 6 Pairs',
   rating:{
     stars:3.5,
@@ -24,7 +27,8 @@ const product = [{
   },
   price:1381
 },{
-  image:'products/6-piece-non-stick-baking-set.webp',
+  id:'1kt23ai004',
+  image:'images/products/6-piece-non-stick-baking-set.webp',
   name:'Six-piece nonstick baking pan set',
   rating:{
     stars:4.5,
@@ -32,7 +36,8 @@ const product = [{
   },
   price:1681
 },{
-  image:'products/blackout-curtain-set-beige.webp',
+  id:'1kt23ai005',
+  image:'images/products/blackout-curtains-black.jpg',
   name:'Beige blackout curtain set',
   rating:{
     stars:4.5,
@@ -40,7 +45,8 @@ const product = [{
   },
   price:1881
 },{
-  image:'products/6-piece-white-dinner-plate-set.jpg',
+  id:'1kt23ai006',
+  image:'images/products/6-piece-white-dinner-plate-set.jpg',
   name:'Six-piece white dinner plate set',
   rating:{
     stars:5,
@@ -48,7 +54,8 @@ const product = [{
   },
   price:1181
 },{
-  image:'products/coffeemaker-with-glass-carafe-black.jpg',
+  id:'1kt23ai007',
+  image:'images/products/coffeemaker-with-glass-carafe-black.jpg',
   name:'Black coffee maker with glass carafe',
   rating:{
     stars:4,
@@ -56,7 +63,8 @@ const product = [{
   },
   price:2181
 },{
-  image:'products/countertop-blender-64-oz.jpg',
+   id:'1kt23ai008',
+  image:'images/products/countertop-blender-64-oz.jpg',
   name:'Countertop blender with large jar',
   rating:{
     stars:4.5,
@@ -64,7 +72,8 @@ const product = [{
   },
   price:2981
 },{
-  image:'products/double-elongated-twist-french-wire-earrings.webp',
+  id:'1kt23ai009',
+  image:'images/products/double-elongated-twist-french-wire-earrings.webp',
   name:'Gold elongated twist drop earrings',
   rating:{
     stars:4.5,
@@ -72,7 +81,8 @@ const product = [{
   },
   price:3191
 },{
-  image:'products/duvet-cover-set-blue-twin.jpg',
+  id:'1kt23ai010',
+  image:'images/products/duvet-cover-set-blue-twin.jpg',
   name:'Blue twin duvet cover set',
   rating:{
     stars:1.0,
@@ -80,7 +90,8 @@ const product = [{
   },
   price:4111
 },{
-  image:'products/facial-tissue-2-ply-18-boxes.jpg',
+  id:'1kt23ai011',
+  image:'images/products/facial-tissue-2-ply-18-boxes.jpg',
   name:'Two-ply facial tissue box pack',
   rating:{
     stars:4,
@@ -88,7 +99,8 @@ const product = [{
   },
   price:1981
 },{
-  image:'products/women-stretch-popover-hoodie-black.jpg',
+  id:'1kt23ai012',
+  image:'images/products/women-stretch-popover-hoodie-black.jpg',
   name:'Womens black stretch pullover hoodie',
   rating:{
     stars:3.5,
@@ -96,7 +108,8 @@ const product = [{
   },
   price:2781
 },{
-  image:'products/women-chunky-beanie-gray.webp',
+  id:'1kt23ai013',
+  image:'images/products/women-chunky-beanie-gray.webp',
   name:'Women gray chunky knit beanie',
   rating:{
     stars:5,
@@ -104,7 +117,8 @@ const product = [{
   },
   price:1481
 },{
-  image:'products/vanity-mirror-silver.jpg',
+  id:'1kt23ai014',
+  image:'images/products/vanity-mirror-silver.jpg',
   name:'Silver tabletop vanity mirror',
   rating:{
     stars:3,
@@ -112,7 +126,8 @@ const product = [{
   },
   price:2081
 },{
-  image:'products/umbrella.jpg',
+  id:'1kt23ai015',
+  image:'images/products/umbrella.jpg',
   name:'Compact folding umbrella',
   rating:{
     stars:4,
@@ -120,7 +135,8 @@ const product = [{
   },
   price:1881
 },{
-  image:'products/trash-can-with-foot-pedal-50-liter.jpg',
+  id:'1kt23ai016',
+  image:'images/products/trash-can-with-foot-pedal-50-liter.jpg',
   name:'50-liter foot pedal trash can',
   rating:{
     stars:5,
@@ -128,7 +144,8 @@ const product = [{
   },
   price:1181
 },{
-  image:'products/floral-mixing-bowl-set.jpg',
+  id:'1kt23ai017',
+  image:'images/products/floral-mixing-bowl-set.jpg',
   name:'Flore mixing bowl set with lids',
   rating:{
     stars:5,
@@ -136,7 +153,8 @@ const product = [{
   },
   price:1781
 },{
-  image:'products/sky-flower-stud-earrings.webp',
+  id:'1kt23ai018',
+  image:'images/products/sky-flower-stud-earrings.webp',
   name:'Sky blue flower stud earrings',
   rating:{
     stars:4,
@@ -144,7 +162,8 @@ const product = [{
   },
   price:2381
 },{
-  image:'products/plain-hooded-fleece-sweatshirt-yellow.jpg',
+  id:'1kt23ai019',
+  image:'images/products/plain-hooded-fleece-sweatshirt-yellow.jpg',
   name:'Yellow hooded fleece sweatshirt',
   rating:{
     stars:5,
@@ -152,7 +171,8 @@ const product = [{
   },
   price:2881
 },{
-  image:'products/non-stick-cooking-set-15-pieces.webp',
+  id:'1kt23ai020',
+  image:'images/products/non-stick-cooking-set-15-pieces.webp',
   name:'15-piece nonstick cookware set',
   rating:{
     stars:3.5,
@@ -160,7 +180,8 @@ const product = [{
   },
   price:1281
 },{
-  image:'products/men-navigator-sunglasses-brown.jpg',
+  id:'1kt23ai021',
+  image:'images/products/men-navigator-sunglasses-brown.jpg',
   name:'Mens brown navigator sunglasses',
   rating:{
     stars:4.5,
@@ -168,7 +189,8 @@ const product = [{
   },
   price:1081
 },{
-  image:'products/round-airtight-food-storage-containers.jpg',
+  id:'1kt23ai022',
+  image:'images/products/round-airtight-food-storage-containers.jpg',
   name:'Round airtight food storage containers',
   rating:{
     stars:3,
@@ -176,7 +198,8 @@ const product = [{
   },
   price:2681
 },{
-  image:'products/luxury-tower-set-6-piece.jpg',
+  id:'1kt23ai023',
+  image:'images/products/luxury-tower-set-6-piece.jpg',
   name:'Luxury six-piece towel set',
   rating:{
     stars:4,
@@ -184,7 +207,8 @@ const product = [{
   },
   price:1681
 },{
-  image:'products/intermediate-composite-basketball.jpg',
+  id:'1kt23ai024',
+  image:'images/products/intermediate-composite-basketball.jpg',
   name:'Intermediate composite basketball',
   rating:{
     stars:3.5,
@@ -204,7 +228,7 @@ product.forEach((product)=>{
             <h4 class="content">"${product.name}</h4>
           </div>
           <div class="product_rting">
-            <img src="ratings/rating-${product.rating.stars * 10}.png" class="product_strs">
+            <img src="images/ratings/rating-${product.rating.stars * 10}.png" class="product_strs">
             <h3 class="rting_no">${product.rating.count}</h3>
           </div>
           <div class="product_cost">
@@ -232,6 +256,7 @@ product.forEach((product)=>{
   
 });
 document.querySelector('.row-1').innerHTML=html;
+console.log(html);
 
 
 
