@@ -1,8 +1,9 @@
-import { cart } from "./cart.js";
+import { cart,deleted_product } from "./cart.js";
 import { products } from "../data/products.js";
+
 let cart_summery = '';
 cart.forEach((cartItem)=>{
-  const productId= cartItem.productId;
+  let productId= cartItem.productId;
   let matchingproduct;
   products.forEach((product)=>{
     if(product.id === productId){
@@ -22,7 +23,7 @@ cart.forEach((cartItem)=>{
           <h3 class="product_name">${matchingproduct.name}</h3>
           <h3 class="product_cost">$${(matchingproduct.priceCents / 100).toFixed(2)}</h3>
           <h3 class="product_quantity ">Quantity: ${cartItem.quantity}<scan class="Update1">Update 
-            </scan><scan class="Update2">Delete</scan></h3>
+            </scan><scan class="Update2" data-product-id=${matchingproduct.id}>Delete</scan></h3>
         </div>
         <div class="product_date_year">
           <h3 class="choose-del">Choose a delivery option:</h3>
@@ -46,3 +47,13 @@ cart.forEach((cartItem)=>{
   `
 });
 document.querySelector('.side_bar').innerHTML=cart_summery;
+
+
+document.querySelectorAll('.Update2')
+.forEach((link)=>{
+  link.addEventListener('click',()=>{
+    const productId=link.dataset.productId;
+    deleted_product(productId)
+    
+  })
+})
