@@ -14,7 +14,7 @@ cart.forEach((cartItem)=>{
   
     cart_summery +=
     `
-    <div class="order_list">
+    <div class="order_list  js-order-list-${matchingproduct.id}">
       <h2 class="del_date">Delivery date: Tuesday, June 21</h2>
       <div class="product_detail">
         <img src="${matchingproduct.image}" class="products-img">
@@ -54,6 +54,9 @@ document.querySelectorAll('.Update2')
   link.addEventListener('click',()=>{
     const productId=link.dataset.productId;
     deleted_product(productId)
+    const removing_data= document.querySelector(`.js-order-list-${productId}`);
+    removing_data.remove();
     
-  })
-})
+    
+  });
+});

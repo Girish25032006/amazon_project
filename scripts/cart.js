@@ -32,4 +32,5 @@ export function deleted_product(productId){
 
   });
   cart=newcart;
+  
 }
