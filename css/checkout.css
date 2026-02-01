@@ -59,8 +59,9 @@ body{
   margin-left: 82px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: larger;
-  margin-top: 90px;
+  margin-top:150px;
   word-spacing: 6px;
+  margin-bottom: 0;
 }
 .order_list{
   border: 1px solid rgb(203, 197, 197);
@@ -68,6 +69,8 @@ body{
   width: 740px;
   margin-left: 82px;
   border-radius: 4px;
+  padding-right: 10px;
+  
 }
 .del_date{
   color: rgb(0, 118, 0);
@@ -149,6 +152,11 @@ body{
   padding: 0px;
  
 }
+.name_option{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
 
 .product_date{
@@ -164,12 +172,13 @@ body{
   display: flex;
   flex-direction: column;
   row-gap: 0;
+  justify-content: end;
 }
 .main_div{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   row-gap: 8px;
-  margin-top: 50px;
+  margin-top: 20px;
   padding-bottom: 30px;
 }
 .product_rates_dis{
@@ -181,8 +190,8 @@ body{
 }
 .side_bar{
   display: flex;
-  flex-direction: row;
-  column-gap: 0;
+  flex-direction: column;
+  row-gap: 10px;
 }
 .order_summary{
   margin-left: 20px;
