@@ -63,3 +63,19 @@ document.querySelectorAll('.Update2')
 });
 
 
+let num =0;
+cart.forEach((cartItem)=>{
+let productId = cartItem.productId
+
+  products.forEach((product)=>{
+    if(product.id === productId){
+      num +=1
+    }
+    
+  }); 
+});
+console.log(num);
+
+
+document.querySelector('.font-bold').innerHTML = `(${num} items)`;
+

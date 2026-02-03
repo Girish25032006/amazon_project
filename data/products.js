@@ -462,7 +462,7 @@ export const products = [
   {
     id: "4e37dd03-3b23-4bc6-9ff8-44e112a92c64",
     image: "images/products/non-stick-cooking-set-15-pieces.webp",
-    name: "Non-Stick Cookware Set, Pots, Pans and Utensils - 15 Pieces",
+    name: "Non-Stick Cookware Set, Pots, Pans and <br> Utensils - 15 Pieces",
     rating: {
       stars: 4.5,
       count: 511

@@ -32,8 +32,9 @@ products.forEach((product)=>{
               <option value="2">10</option>
             </select>
           </div>
+          
           <div class="add_to_crt  " >
-            <button class="crt_btn  js-crt_btn" data-product-id ="${product.id}">Add to Cart</button>
+            <button class="crt_btn js-crt_btn" data-product-id ="${product.id}">Add to Cart</button>
           </div>
       </div>
   `
@@ -64,4 +65,7 @@ document.querySelectorAll('.js-crt_btn')
   })
  
 })
- 
+function addtocart(){
+  let addedcart = document.querySelector('crt_btn').value;
+  document.querySelector('.result').innerHTML='Added to cart'
+}
