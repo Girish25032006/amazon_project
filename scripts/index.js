@@ -51,6 +51,7 @@ function cartquantity_total(){
   
   
   document.querySelector('.cart_number').innerHTML=cartquantity;
+ 
 }
 
 document.querySelectorAll('.js-crt_btn')

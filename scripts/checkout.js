@@ -1,6 +1,7 @@
 import { cart,deleted_product } from "./cart.js";
 import { products } from "../data/products.js";
 
+
 let cart_summery = '';
 cart.forEach((cartItem)=>{
   let productId= cartItem.productId;
@@ -60,3 +61,5 @@ document.querySelectorAll('.Update2')
     
   });
 });
+
+

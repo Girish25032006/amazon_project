@@ -538,7 +538,7 @@ export const products = [
   {
     id: "0d7f9afa-2efe-4fd9-b0fd-ba5663e0a524",
     image: "images/products/coffeemaker-with-glass-carafe-black.jpg",
-    name: "Coffeemaker with Glass Carafe and Reusable Filter - 25 Oz, Black",
+    name: "Coffeemaker with Glass Carafe and Reusable <br> Filter - 25 Oz, Black",
     rating: {
       stars: 4.5,
       count: 1211
