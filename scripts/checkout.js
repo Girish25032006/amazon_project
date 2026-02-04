@@ -1,7 +1,10 @@
 import { cart,deleted_product } from "./cart.js";
 import { products } from "../data/products.js";
+import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 
-
+const today=dayjs();
+const yesterday=today.add(7,'days');
+console.log( yesterday.format('dddd MMMM D'))
 let cart_summery = '';
 cart.forEach((cartItem)=>{
   let productId= cartItem.productId;
@@ -48,34 +51,24 @@ cart.forEach((cartItem)=>{
   `
 });
 document.querySelector('.side_bar').innerHTML=cart_summery;
-
-
 document.querySelectorAll('.Update2')
 .forEach((link)=>{
   link.addEventListener('click',()=>{
     const productId=link.dataset.productId;
     deleted_product(productId)
     const removing_data= document.querySelector(`.js-order-list-${productId}`);
-    removing_data.remove();
-    
-    
+    removing_data.remove();    
   });
 });
-
 
 let num =0;
 cart.forEach((cartItem)=>{
 let productId = cartItem.productId
-
   products.forEach((product)=>{
     if(product.id === productId){
       num +=1
-    }
-    
+    }  
   }); 
 });
-console.log(num);
-
-
 document.querySelector('.font-bold').innerHTML = `(${num} items)`;
 

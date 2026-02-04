@@ -13,7 +13,7 @@
 
 
  function savetocart(){
-  localStorage.removeItem('cart');
+ 
   localStorage.setItem('cart',JSON.stringify(cart));
  }
 
