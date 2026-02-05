@@ -1,6 +1,7 @@
 import { cart,deleted_product } from "./cart.js";
 import { products } from "../data/products.js";
 import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
+import { delivaryoptions } from "../data/delivary.js";
 
 const today=dayjs();
 const yesterday=today.add(7,'days');
@@ -31,18 +32,7 @@ cart.forEach((cartItem)=>{
         </div>
         <div class="product_date_year">
           <h3 class="choose-del">Choose a delivery option:</h3>
-          <label class="input_div">
-            <input type="radio" class="input-1" name="delivery-${matchingproduct.id}">
-            <h3 class="product_date"><scan class="date">Tuesday, June 21</scan><br>FREE Shipping</h3>
-          </label>
-          <label class="input_div">
-            <input type="radio" class="input-1" name="delivery-${matchingproduct.id}">
-            <h3 class="product_date"><scan class="date">Wednesday, June 15</scan><br>$4.99 - Shipping</h3>
-          </label>
-          <label class="input_div" >
-            <input type="radio" class="input-1" name="delivery-${matchingproduct.id}">
-            <h3 class="product_date"><scan class="date">Monday, June 13</scan><br>$9.99 - Shipping</h3>
-          </label>
+          ${delivarydays(matchingproduct)}
         </div>
        </div>
       </div>
@@ -50,6 +40,28 @@ cart.forEach((cartItem)=>{
 
   `
 });
+function delivarydays(matchingproduct){
+  let html = '';
+  delivaryoptions.forEach((delivaryoption)=>{
+    const today = dayjs();
+    const afteradays = today.add(delivaryoption.delivarydays,'days');
+    const formate = afteradays.format('dddd,MMMM D');
+    const price = delivaryoption.priceCents === 0?'FREE':`$${(delivaryoption.priceCents / 100).toFixed(2)}`
+   
+    html+=
+    `
+    <label class="input_div" >
+      <input type="radio" class="input-1" name="delivery-${matchingproduct.id}">
+      <h3 class="product_date"><scan class="date">${formate}</scan><br>${price}- Shipping</h3>
+    </label>
+    `
+
+  })
+  return html;
+
+}
+ 
+
 document.querySelector('.side_bar').innerHTML=cart_summery;
 document.querySelectorAll('.Update2')
 .forEach((link)=>{
