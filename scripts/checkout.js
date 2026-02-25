@@ -16,11 +16,23 @@ cart.forEach((cartItem)=>{
     }
     
   });
+  let delivaryoptionId=cartItem.delivaryoptionId;
+  let delivaryoption;
+  delivaryoptions.forEach((Option)=>{
+    if(Option.id === delivaryoptionId){
+      delivaryoption=Option;
+    }
+  });
+  const today = dayjs();
+  const afteradays = today.add(delivaryoption.delivarydays,'days');
+  const formate = afteradays.format('dddd,MMMM D');
+  const price = delivaryoption.priceCents === 0?'FREE':`$${(delivaryoption.priceCents / 100).toFixed(2)}`;
+  
   
     cart_summery +=
     `
     <div class="order_list  js-order-list-${matchingproduct.id}">
-      <h2 class="del_date">Delivery date: Tuesday, June 21</h2>
+      <h2 class="del_date">Delivery date: ${formate}</h2>
       <div class="product_detail">
         <img src="${matchingproduct.image}" class="products-img">
        <div class="name_option">
@@ -32,7 +44,7 @@ cart.forEach((cartItem)=>{
         </div>
         <div class="product_date_year">
           <h3 class="choose-del">Choose a delivery option:</h3>
-          ${delivarydays(matchingproduct)}
+          ${delivarydays(matchingproduct,cartItem)}
         </div>
        </div>
       </div>
@@ -40,18 +52,21 @@ cart.forEach((cartItem)=>{
 
   `
 });
-function delivarydays(matchingproduct){
+function delivarydays(matchingproduct,cartItem){
   let html = '';
   delivaryoptions.forEach((delivaryoption)=>{
     const today = dayjs();
     const afteradays = today.add(delivaryoption.delivarydays,'days');
     const formate = afteradays.format('dddd,MMMM D');
-    const price = delivaryoption.priceCents === 0?'FREE':`$${(delivaryoption.priceCents / 100).toFixed(2)}`
-   
+    const price = delivaryoption.priceCents === 0?'FREE':`$${(delivaryoption.priceCents / 100).toFixed(2)}`;
+    const ischecked = delivaryoption.id === cartItem.delivaryoptionId;
+    
     html+=
     `
     <label class="input_div" >
-      <input type="radio" class="input-1" name="delivery-${matchingproduct.id}">
+      <input type="radio"
+      ${ischecked ?"checked":""}
+       class="input-1" name="delivery-${matchingproduct.id}">
       <h3 class="product_date"><scan class="date">${formate}</scan><br>${price}- Shipping</h3>
     </label>
     `

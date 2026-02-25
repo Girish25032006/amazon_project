@@ -78,7 +78,7 @@ export const products = [
   {
     id: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
     image: "images/products/6-piece-non-stick-baking-set.webp",
-    name: "6-Piece Nonstick, Carbon Steel Oven Bakeware Baking Set",
+    name: "6-Piece Nonstick, Carbon Steel Oven <br>Bakeware Baking Set",
     rating: {
       stars: 4.5,
       count: 175
@@ -124,7 +124,7 @@ export const products = [
   {
     id: "3fdfe8d6-9a15-4979-b459-585b0d0545b9",
     image: "images/products/liquid-laundry-detergent-plain.jpg",
-    name: "Liquid Laundry Detergent, 110 Loads, 82.5 Fl Oz",
+    name: "Liquid Laundry Detergent, 110 Loads,<br> 82.5 Fl Oz",
     rating: {
       stars: 4.5,
       count: 305
@@ -233,7 +233,7 @@ export const products = [
   {
     id: "c2a82c5e-aff4-435f-9975-517cfaba2ece",
     image: "images/products/electric-glass-and-steel-hot-water-kettle.webp",
-    name: "Electric Glass and Steel Hot Tea Water Kettle - 1.7-Liter",
+    name: "Electric Glass and Steel Hot Tea Water Kettle -<br> 1.7-Liter",
     rating: {
       stars: 5,
       count: 846
@@ -346,7 +346,7 @@ export const products = [
   {
     id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
     image: "images/products/men-golf-polo-t-shirt-blue.jpg",
-    name: "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
+    name: "Men's Regular-Fit Quick-Dry<br> Golf Polo Shirt",
     rating: {
       stars: 4.5,
       count: 2556
@@ -364,7 +364,7 @@ export const products = [
   {
     id: "b86ddc8b-3501-4b17-9889-a3bad6fb585f",
     image: "images/products/trash-can-with-foot-pedal-50-liter.jpg",
-    name: "Trash Can with Foot Pedal - Brushed Stainless Steel",
+    name: "Trash Can with Foot Pedal - Brushed<br> Stainless Steel",
     rating: {
       stars: 4.5,
       count: 2286
@@ -509,7 +509,7 @@ export const products = [
   {
     id: "d339adf3-e004-4c20-a120-40e8874c66cb",
     image: "images/products/double-elongated-twist-french-wire-earrings.webp",
-    name: "Double Oval Twist French Wire Earrings - Gold",
+    name: "Double Oval Twist French Wire<br> Earrings - Gold",
     rating: {
       stars: 4.5,
       count: 117
@@ -523,7 +523,7 @@ export const products = [
   {
     id: "d37a651a-d501-483b-aae6-a9659b0757a0",
     image: "images/products/round-airtight-food-storage-containers.jpg",
-    name: "Round Airtight Food Storage Containers - 5 Piece",
+    name: "Round Airtight Food Storage<br> Containers - 5 Piece",
     rating: {
       stars: 4,
       count: 126
@@ -553,7 +553,7 @@ export const products = [
   {
     id: "02e3a47e-dd68-467e-9f71-8bf6f723fdae",
     image: "images/products/blackout-curtains-black.jpg",
-    name: "Blackout Curtains Set 42 x 84-Inch - Black, 2 Panels",
+    name: "Blackout Curtains<br> Set 42 x 84-Inch - Black, 2 Panels",
     rating: {
       stars: 4.5,
       count: 363
@@ -582,7 +582,7 @@ export const products = [
   {
     id: "10ed8504-57db-433c-b0a3-fc71a35c88a1",
     image: "images/products/knit-athletic-sneakers-pink.webp",
-    name: "Waterproof Knit Athletic Sneakers - Pink",
+    name: "Waterproof Knit Athletic<br> Sneakers - Pink",
     rating: {
       stars: 4,
       count: 89
@@ -613,7 +613,7 @@ export const products = [
   {
     id: "36c64692-677f-4f58-b5ec-0dc2cf109e27",
     image: "images/products/floral-mixing-bowl-set.jpg",
-    name: "10-Piece Mixing Bowl Set with Lids - Floral",
+    name: "10-Piece Mixing Bowl Set with<br> Lids - Floral",
     rating: {
       stars: 5,
       count: 679
